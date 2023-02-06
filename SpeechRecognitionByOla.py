@@ -10,7 +10,7 @@ def take():
         r.pause_threshold = 1
         r.adjust_for_ambient_noise(source)
         audio = r.record(source)
-        print("Recognising your speech...")
+        print("Processing Speech...")
 
     try:
         query = r.recognize_google(audio, language='en-Us')
@@ -19,7 +19,7 @@ def take():
         print(query)
 
     except Exception as e:
-        print("An error occured. Please enable internet connection")
+        print("An error occured. Please check your internet connection")
 
         return "None"
 
@@ -27,5 +27,5 @@ def take():
 
 query = take()
 sleep(10)
-print("Quitting the program now")
+print("Ending program now... ")
 sleep(3)
